@@ -1,2 +1,2 @@
 # Personal-Portfolio
-Welcome to my personal portfolio!
+Welcome! This portfolio was made in compliance to the subject Introduction to Computing.

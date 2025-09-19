@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="styles/navbar-styles.css">
+  <link rel="stylesheet" href="styles/home-styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title> Personal Portfolio - Home</title>
+</head>
+<body>
+  <!-- NAVBAR -->
+   <nav>
+    <div class="left">
+      <a href="home.html"> Adrian Caleb </a>
+    </div>
+    <div class="right">
+      <a href="pages/about-me.html"> About Me </a>
+      <a href="pages/skills.html"> Skills </a>
+      <a href="pages/achievements.html"> Achievements </a>
+      <button class="openbtn" onclick="toggleNav()"> &#9776; </button>
+    </div>
+  </nav>
+
+   <main>
+    <!-- SIDEPANEL -->
+    <div id="mySidepanel" class="sidepanel">
+      <div class="for-mobile">
+        <a href="pages/about-me.html"> About Me </a>
+        <a href="pages/skills.html"> Skills </a>
+        <a href="pages/achievements.html"> Achievements </a>
+      </div>
+     <a href="pages/leadership.html"> Leadership </a>
+     <a href="pages/resume.html"> Resume </a>
+     <a href="pages/competitive.html"> Competitive Experience </a>
+     <a href="pages/extracurricular.html"> Extracurricular </a>
+     <a href="pages/contact.html"> Contact </a>
+     <a href="pages/feedback.html"> Feedback </a>
+    </div>
+    <script>
+      function toggleNav() {
+        let panel = document.querySelector(".sidepanel");
+        if (panel.style.width === "230px") {
+          panel.style.width = "0";
+        } 
+        else {
+          panel.style.width = "230px";
+        }
+      }
+
+      window.addEventListener("scroll", function () {
+        let panel = document.getElementById("mySidepanel");
+        if (panel.style.width !== "0px" && panel.style.width !== "") {
+          panel.style.width = "0";  // close it
+        }
+        });
+    </script>
+
+    <!-- HOME -->
+    <section>
+      <div class="home">
+        <div class="picture">
+          <img class="self-pic" src="images/my-photo.jpg" >
+        </div>
+        <div class="description">
+          <div class="greetings">
+            <h3> Hi, </h3>
+            <h1> I'm Adrian Caleb L. Dela Cruz </h1>
+            <h4> Computer Science Student </h4>
+          </div>
+
+          <div class="message">
+            <p> Welcome to my personal portfolio containing my basic information, background, skills, contacts, and others. You may check out more details by clicking the menu button on the navigation panel.</p>
+          </div>
+
+          <div class="buttons">
+            <a href="mailto:itscaleb0628@gmail.com">
+            <button class="email"> Send an Email </button>
+            </a>
+            <a href="resume.pdf" target="blank">
+            <button class="download"> Download Resume </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+   </main>
+   <footer>
+    <div class="footer-left">
+      <p> Adrian Caleb L. Dela Cruz </p>
+      <a href="mailto:itscaleb0628@gmail.com"> itscaleb0628@gmail.com </a>
+    </div>
+
+    <div class="footer-right">
+      <a href="https://github.com/AdrianCalebDelaCruz" target="blank"> 
+        <i class="fa-brands fa-github"></i> Github 
+      </a>
+      <a href="https://www.linkedin.com/in/adrian-caleb-dela-cruz-735582384/" target="blank"> 
+        <i class="fa-brands fa-linkedin"></i> LinkedIn 
+      </a>
+      <a href="https://plm.edu.ph" target="blank"> 
+        <i class="fa-solid fa-school"></i> PLM
+      </a>
+    </div>
+   </footer>
+</body>
+</html>

@@ -1,0 +1,104 @@
+:root {
+  --text-color: rgb(241, 120, 0);
+  --link-color: rgb(58, 58, 187);
+  --background-color: rgb(17, 122, 131);
+}
+
+/* Achievements */
+.title {
+  background-color: rgb(12, 83, 90);
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  box-shadow: 0 0 7px black;
+}
+
+.title h1 {
+  color: var(--text-color);
+  font-size: 80px;
+  text-shadow: 0.5px 0.5px 4px black;
+}
+
+.achievements {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 7fr;
+  column-gap: 5px;
+  row-gap: 5px;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 50px;
+  justify-content: center;
+  list-style-position: inside;
+
+}
+
+.elementary, .junior-high, .senior-high {
+  color: var(--text-color);
+  background-color: rgb(12, 83, 90);
+  font-size: 20px;
+  padding-top: 8px;
+  text-align: center;
+  text-shadow: 1px 1px black;
+}
+
+.e-awards, .j-awards, .s-awards {
+  color: white;
+  line-height: 30px;
+  background-color: rgb(12, 83, 90);
+  padding: 10px;
+}
+
+.e-awards, .j-awards {
+  line-height: 50px;
+}
+
+ul ul {
+  color: rgb(238, 238, 238);
+  padding-left: 35px;
+  list-style-position: outside;
+}
+
+.mobile-e-awards, .mobile-j-awards, .mobile-s-awards {
+  display: none;
+}
+
+@media (max-width: 786px){
+  .title h1 {
+    font-size: 40px;
+  }
+
+  .achievements {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .e-awards, .j-awards, .s-awards {
+    display: none;
+  }
+
+  .mobile-e-awards, .mobile-j-awards, .mobile-s-awards {
+    display: block;
+    color: white;
+    line-height: 30px;
+    background-color: rgb(12, 83, 90);
+    padding: 10px;
+    padding-left: 40px;
+    text-align: start;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px black;
+  } 
+
+  .elementary, .junior-high, .senior-high {
+    padding: 10px 0;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+  }
+}

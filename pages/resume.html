@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" href="..//styles/navbar-styles.css">
+    <link rel="stylesheet" href="..//styles/resume-styles.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title> Personal Portfolio - Resume </title>
+</head>
+<body>
+    <!-- NAVBAR -->
+   <nav>
+    <div class="left">
+      <a href="../index.html"> Adrian Caleb </a>
+    </div>
+    <div class="right">
+      <a href="about-me.html"> About Me </a>
+      <a href="skills.html"> Skills </a>
+      <a href="achievements.html"> Achievements </a>
+      <button class="openbtn" onclick="toggleNav()"> &#9776; </button>
+    </div>
+  </nav>
+
+  <main>
+    <!-- SIDEPANEL -->
+    <div id="mySidepanel" class="sidepanel">
+      <div class="for-mobile">
+        <a href="about-me.html"> About Me </a>
+        <a href="skills.html"> Skills </a>
+        <a href="achievements.html"> Achievements </a>
+      </div>
+      <a href="leadership.html">Leadership</a>
+      <a href="resume.html">Resume</a>
+      <a href="competitive.html"> Competitive Experience </a>
+      <a href="extracurricular.html"> Extracurricular </a>
+      <a href="contact.html">Contact</a>
+      <a href="feedback.html"> Feedback </a>
+    </div>
+    <script>
+      function toggleNav() {
+        let panel = document.querySelector(".sidepanel");
+        if (panel.style.width === "230px") {
+          panel.style.width = "0";
+        } 
+        else {
+          panel.style.width = "230px";
+        }
+      }
+
+      window.addEventListener("scroll", function () {
+        let panel = document.getElementById("mySidepanel");
+        if (panel.style.width !== "0px" && panel.style.width !== "") {
+          panel.style.width = "0";  // close it
+        }
+        });
+    </script>
+
+    <img src="../images/resume.png" class ="resume">
+
+    <a href="../resume.pdf" target="blank">
+      <button class="download"> Download Resume </button>
+    </a>
+
+  </main>
+  <footer>
+    <div class="footer-left">
+      <p> Adrian Caleb L. Dela Cruz </p>
+      <a href="mailto:itscaleb0628@gmail.com"> itscaleb0628@gmail.com </a>
+    </div>
+
+    <div class="footer-right">
+      <a href="https://github.com/AdrianCalebDelaCruz" target="blank"> 
+        <i class="fa-brands fa-github"></i> Github 
+      </a>
+      <a href="https://www.linkedin.com/in/adrian-caleb-dela-cruz-735582384/" target="blank"> 
+        <i class="fa-brands fa-linkedin"></i> LinkedIn 
+      </a>
+      <a href="https://plm.edu.ph" target="blank"> 
+        <i class="fa-solid fa-school"></i> PLM
+      </a>
+    </div>
+   </footer>
+</body>
+</html>
